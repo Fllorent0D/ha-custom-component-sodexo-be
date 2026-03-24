@@ -60,8 +60,10 @@ jobs:
             "custom_components/pluxee/__init__.py"
             "custom_components/pluxee/config_flow.py"
             "custom_components/pluxee/const.py"
+            "custom_components/pluxee/coordinator.py"
             "custom_components/pluxee/manifest.json"
             "custom_components/pluxee/sensor.py"
+            "custom_components/pluxee/strings.json"
             "custom_components/pluxee/translations/en.json"
           )
           for file in "${required_files[@]}"; do

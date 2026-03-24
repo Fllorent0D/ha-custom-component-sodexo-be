@@ -1,0 +1,41 @@
+{
+    "title": "Pluxee maaltijdkaart integratie voor België",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Inloggegevens toevoegen",
+                "description": "Voer uw Pluxee inloggegevens in.",
+                "data": {
+                    "username": "Gebruikersnaam",
+                    "password": "Wachtwoord"
+                },
+                "data_description": {
+                    "username": "De gebruikersnaam om in te loggen op het Pluxee portaal",
+                    "password": "Het wachtwoord om in te loggen op het Pluxee portaal"
+                }
+            }
+        },
+        "error": {
+            "auth": "Ongeldige inloggegevens voor het Pluxee portaal."
+        },
+        "abort": {
+            "already_configured": "Dit account is al geconfigureerd."
+        }
+    },
+    "entity": {
+        "sensor": {
+            "lunch_pass": {
+                "name": "Lunch Pass"
+            },
+            "eco_pass": {
+                "name": "Eco Pass"
+            },
+            "gift_pass": {
+                "name": "Cadeau Pass"
+            },
+            "conso_pass": {
+                "name": "Conso Pass"
+            }
+        }
+    }
+}

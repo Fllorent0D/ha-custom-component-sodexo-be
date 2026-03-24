@@ -1,0 +1,41 @@
+{
+    "title": "Pluxee Essenskarten-Integration für Belgien",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Anmeldedaten hinzufügen",
+                "description": "Geben Sie Ihre Pluxee Anmeldedaten ein.",
+                "data": {
+                    "username": "Benutzername",
+                    "password": "Passwort"
+                },
+                "data_description": {
+                    "username": "Der Benutzername für die Anmeldung am Pluxee Portal",
+                    "password": "Das Passwort für die Anmeldung am Pluxee Portal"
+                }
+            }
+        },
+        "error": {
+            "auth": "Ungültige Anmeldedaten für das Pluxee Portal."
+        },
+        "abort": {
+            "already_configured": "Dieses Konto ist bereits konfiguriert."
+        }
+    },
+    "entity": {
+        "sensor": {
+            "lunch_pass": {
+                "name": "Lunch Pass"
+            },
+            "eco_pass": {
+                "name": "Eco Pass"
+            },
+            "gift_pass": {
+                "name": "Geschenk Pass"
+            },
+            "conso_pass": {
+                "name": "Conso Pass"
+            }
+        }
+    }
+}

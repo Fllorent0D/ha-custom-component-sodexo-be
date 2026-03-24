@@ -1,42 +1,35 @@
-"""The pluxee integration."""
+"""The Pluxee integration."""
 
 from __future__ import annotations
-
-import logging
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import config_validation as cv
+from pluxee import PluxeeAsyncClient
 
-from .const import DOMAIN
-
-__version__ = "1.0.0"
-_LOGGER = logging.getLogger(__name__)
-_LOGGER.setLevel(logging.DEBUG)
+from .const import CONF_PASSWORD, CONF_USERNAME, DOMAIN
+from .coordinator import PluxeeCoordinator
 
 CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
-PLATFORMS: list[str] = ["sensor"]
+PLATFORMS = ["sensor"]
+
+type PluxeeConfigEntry = ConfigEntry[PluxeeCoordinator]
 
 
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
-    """Set up the component from a config entry."""
-    hass.data.setdefault(DOMAIN, {})
+async def async_setup_entry(hass: HomeAssistant, entry: PluxeeConfigEntry) -> bool:
+    """Set up Pluxee from a config entry."""
+    api = PluxeeAsyncClient(entry.data[CONF_USERNAME], entry.data[CONF_PASSWORD])
+    coordinator = PluxeeCoordinator(hass, api)
+
+    await coordinator.async_config_entry_first_refresh()
+
+    entry.runtime_data = coordinator
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
 
 
-async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
+async def async_unload_entry(hass: HomeAssistant, entry: PluxeeConfigEntry) -> bool:
     """Unload a config entry."""
-    result = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
-    if result:
-        hass.data[DOMAIN].pop(entry.entry_id)
-
-    return result
-
-
-async def async_reload_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
-    """Reload config entry."""
-    await async_unload_entry(hass, entry)
-    await async_setup_entry(hass, entry)
+    return await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
