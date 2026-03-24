@@ -5,7 +5,9 @@ on:
     # Run daily at midnight UTC
     - cron: "0 0 * * *"
   issues:
-    types: [labeled, commented]
+    types: [labeled]
+  issue_comment:
+    types: [created]
 
 permissions:
   issues: write
@@ -40,9 +42,9 @@ jobs:
     name: Remove label on author response
     runs-on: ubuntu-latest
     if: >
-      github.event_name == 'issues' &&
-      github.event.action == 'commented' &&
-      github.event.issue &&
+      github.event_name == 'issue_comment' &&
+      github.event.action == 'created' &&
+      github.event.issue.pull_request == null &&
       contains(github.event.issue.labels.*.name, 'more-info-required')
     steps:
       - name: Check if commenter is the issue author
