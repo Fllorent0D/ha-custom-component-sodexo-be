@@ -42,11 +42,11 @@ jobs:
 
       - name: Create release zip
         run: |
-          cd custom_components/sodexo
-          zip -r ../../sodexo.zip .
+          cd custom_components/pluxee
+          zip -r ../../pluxee.zip .
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ needs.release-please.outputs.tag_name }}
-          files: sodexo.zip
+          files: pluxee.zip

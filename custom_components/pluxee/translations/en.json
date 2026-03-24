@@ -1,0 +1,41 @@
+{
+    "title": "Pluxee meal card integration for Belgium",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Add Credentials",
+                "description": "Enter your Pluxee credentials.",
+                "data": {
+                    "username": "Username",
+                    "password": "Password"
+                },
+                "data_description": {
+                    "username": "The username used to login in the Pluxee portal",
+                    "password": "The password used to login in the Pluxee portal"
+                }
+            }
+        },
+        "error": {
+            "auth": "Invalid credentials for the Pluxee portal."
+        },
+        "abort": {
+            "already_configured": "This account is already configured."
+        }
+    },
+    "entity": {
+        "sensor": {
+            "lunch_pass": {
+                "name": "Lunch Pass"
+            },
+            "eco_pass": {
+                "name": "Eco Pass"
+            },
+            "gift_pass": {
+                "name": "Gift Pass"
+            },
+            "conso_pass": {
+                "name": "Conso Pass"
+            }
+        }
+    }
+}
