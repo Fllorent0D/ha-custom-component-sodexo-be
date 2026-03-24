@@ -10,13 +10,13 @@
                     "password": "Password"
                 },
                 "data_description": {
-                    "username": "The username used to login in https://sodexo4you.be portal",
-                    "password": "The password used to login in https://sodexo4you.be portal"
+                    "username": "The username used to login in https://users.pluxee.be portal",
+                    "password": "The password used to login in https://users.pluxee.be portal"
                 }
             }
         },
         "error": {
-            "auth": "Invalid credentials accessing https://minhaconta.sodexobeneficios.pt/ portal.",
+            "auth": "Invalid credentials accessing https://users.pluxee.be portal.",
             "invalidCountry": "Invalid country or country not supported yet."
         },
         "abort": {

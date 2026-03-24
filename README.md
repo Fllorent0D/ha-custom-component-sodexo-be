@@ -8,7 +8,7 @@
 # Belgian Sodexo Card Integration
 Sodexo - Custom Component for Home Assistant
 
-The data source for this integration is the [Sodexo](https://sodexo4you.be/).
+The data source for this integration is the [Sodexo/Pluxee](https://users.pluxee.be).
 
 The author of this project categorically rejects any and all responsibility for the card balance and other data that were presented by the integration.
 
@@ -41,21 +41,21 @@ As a bonus, this sample also includes a `tap_action` to update the card's balanc
 ```yaml
 type: entities
 entities:
-  - entity: sensor.sodexo_card
+  - entity: sensor.sodexo_lunch_amount
     secondary_info: last-updated
     tap_action:
       action: call-service
       service: homeassistant.update_entity
       target:
-        entity_id: sensor.sodexo_card
-  - entity: sensor.sodexo_card
+        entity_id: sensor.sodexo_lunch_amount
+  - entity: sensor.sodexo_lunch_amount
     name: Updated
     type: attribute
     attribute: updated
 ```
 
 # Legal notice
-This is a personal project and isn't in any way affiliated with, sponsored or endorsed by [Sodexo Belgium](https://sodexo4you.be/).
+This is a personal project and isn't in any way affiliated with, sponsored or endorsed by [Sodexo Belgium](https://users.pluxee.be).
 
 All product names, trademarks and registered trademarks in (the images in) this repository, are property of their respective owners. All images in this repository are used by the project for identification purposes only.
 

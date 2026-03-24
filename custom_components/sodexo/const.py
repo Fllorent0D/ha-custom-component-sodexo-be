@@ -7,14 +7,14 @@ DOMAIN_DATA = f"{DOMAIN}_data"
 DEFAULT_ICON = "mdi:credit-card"
 UNIT_OF_MEASUREMENT = "€"
 
-ATTRIBUTION = "Data provided by https://sodexo4you.be/fr"
-LOGIN_URL = "https://sodexo4you.be/fr"
+ATTRIBUTION = "Data provided by https://users.pluxee.be"
+LOGIN_URL = "https://users.pluxee.be"
 
 LUNCH_PASS_SELECTOR = "body > header > div.header-fixed > div.balance-block > div > ul > li.lunch-pass > a > span.balance_price"
 ECO_PASS_SELECTOR = "body > header > div.header-fixed > div.balance-block > div > ul > li.eco-pass > a > span.balance_price"
 GIFT_PASS_SELECTOR = "body > header > div.header-fixed > div.balance-block > div > ul > li.cadeau-pass > a > span.balance_price"
 
-COUNTRY_PT = "Belgium"
+COUNTRY_BE = "Belgium"
 
 CONF_COUNTRY = "country"
 CONF_USERNAME = "username"
@@ -22,7 +22,7 @@ CONF_PASSWORD = "password"
 
 CONF_COUNTRIES = [
     "Australia",
-    "Belgium",
+    COUNTRY_BE,
     "Brasil",
     "Canada",
     "Chile",
@@ -45,7 +45,7 @@ CONF_COUNTRIES = [
     "Peru",
     "Philippines",
     "Poland",
-    COUNTRY_PT,
+    "Portugal",
     "Qatar",
     "Romania",
     "Singapore",

@@ -16,7 +16,7 @@ from homeassistant.config_entries import ConfigEntry
 
 from pluxee import PluxeeAsyncClient
 from .const import (
-    COUNTRY_PT, DOMAIN, DEFAULT_ICON, UNIT_OF_MEASUREMENT,
+    COUNTRY_BE, DOMAIN, DEFAULT_ICON, UNIT_OF_MEASUREMENT,
     CONF_COUNTRY, CONF_USERNAME, CONF_PASSWORD,
     ATTRIBUTION
 )
