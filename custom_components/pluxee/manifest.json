@@ -2,7 +2,6 @@
     "domain": "pluxee",
     "name": "Pluxee Meal Card Integration for Belgium",
     "codeowners": [
-        "@netsoft-ruidias",
         "@Fllorent0D",
         "@Tib612"
     ],
