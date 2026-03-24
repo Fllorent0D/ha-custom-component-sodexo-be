@@ -1,5 +1,5 @@
 """LIB to Sodexo."""
-import enum
+
 from html.parser import HTMLParser
 
 
@@ -7,7 +7,7 @@ def parse_html(html: str) -> str:
     result = html
     index = result.find('<div class="valor_saldo">')
     result = result[index:]
-    index = result.find('</div>')
+    index = result.find("</div>")
     result = result[0:index]
 
     parser = HtmlParser()
@@ -24,11 +24,11 @@ class HtmlParser(HTMLParser):
         self.capture = False
 
     def handle_starttag(self, tag, attrs):
-        if tag in ('div'):
+        if tag in ("div"):
             self.capture = True
 
     def handle_endtag(self, tag):
-        if tag in ('div'):
+        if tag in ("div"):
             self.capture = False
 
     def handle_data(self, data):
@@ -39,7 +39,9 @@ class HtmlParser(HTMLParser):
 class AccountDetails:
     """Represents an Account Details."""
 
-    def __init__(self, lunch_pass: float, eco_pass: float, gift_pass: float, updated: str):
+    def __init__(
+        self, lunch_pass: float, eco_pass: float, gift_pass: float, updated: str
+    ):
         self._lunch_pass = lunch_pass
         self._eco_pass = eco_pass
         self._gift_pass = gift_pass
@@ -52,9 +54,11 @@ class AccountDetails:
     @property
     def lunch_pass_amount(self) -> float:
         return self._lunch_pass
+
     @property
     def eco_pass_amount(self) -> float:
         return self._eco_pass
+
     @property
     def gift_pass_amount(self) -> float:
         return self._gift_pass

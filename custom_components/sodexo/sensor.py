@@ -1,8 +1,8 @@
 """Platform for sensor integration."""
-from __future__ import annotations
-from typing import Any
-import logging
 
+from __future__ import annotations
+
+import logging
 from datetime import timedelta
 from typing import Any, Callable, Dict
 
@@ -11,14 +11,17 @@ from homeassistant.components.sensor import (
     SensorEntity,
     SensorStateClass,
 )
-from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
-
+from homeassistant.core import HomeAssistant
 from pluxee import PluxeeAsyncClient
+
 from .const import (
-    COUNTRY_BE, DOMAIN, DEFAULT_ICON, UNIT_OF_MEASUREMENT,
-    CONF_COUNTRY, CONF_USERNAME, CONF_PASSWORD,
-    ATTRIBUTION
+    ATTRIBUTION,
+    CONF_PASSWORD,
+    CONF_USERNAME,
+    DEFAULT_ICON,
+    DOMAIN,
+    UNIT_OF_MEASUREMENT,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -28,9 +31,9 @@ _LOGGER.setLevel(logging.DEBUG)
 SCAN_INTERVAL = timedelta(minutes=60)
 
 
-async def async_setup_entry(hass: HomeAssistant,
-                            config_entry: ConfigEntry,
-                            async_add_entities: Callable):
+async def async_setup_entry(
+    hass: HomeAssistant, config_entry: ConfigEntry, async_add_entities: Callable
+):
     """Setup sensor platform."""
     config = config_entry.data
     api = PluxeeAsyncClient(config[CONF_USERNAME], config[CONF_PASSWORD])
@@ -38,7 +41,7 @@ async def async_setup_entry(hass: HomeAssistant,
     sensors = [
         SodexoLunchPassSensor(api, config),
         SodexoEcoPassSensor(api, config),
-        SodexoGiftPassSensor(api, config)
+        SodexoGiftPassSensor(api, config),
     ]
     async_add_entities(sensors, update_before_add=True)
 
@@ -92,9 +95,7 @@ class SodexoSensor(SensorEntity):
     @property
     def extra_state_attributes(self) -> Dict[str, Any]:
         """Return the state attributes."""
-        return {
-            "updated": self._updated
-        }
+        return {"updated": self._updated}
 
 
 class SodexoLunchPassSensor(SodexoSensor):
