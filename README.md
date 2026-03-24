@@ -1,9 +1,9 @@
-![GitHub](https://img.shields.io/github/license/Fllorent0D/ha-custom-component-sodexo-be?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/Fllorent0D/ha-custom-component-pluxee-be?style=for-the-badge)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Fllorent0D/ha-custom-component-sodexo-be?style=for-the-badge)
-![GitHub Release Date](https://img.shields.io/github/release-date/Fllorent0D/ha-custom-component-sodexo-be?style=for-the-badge)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Fllorent0D/ha-custom-component-sodexo-be?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Fllorent0D/ha-custom-component-pluxee-be?style=for-the-badge)
+![GitHub Release Date](https://img.shields.io/github/release-date/Fllorent0D/ha-custom-component-pluxee-be?style=for-the-badge)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Fllorent0D/ha-custom-component-pluxee-be?style=for-the-badge)
 
 # Belgian Pluxee Card Integration
 Pluxee (formerly Sodexo) - Custom Component for Home Assistant
