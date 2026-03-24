@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/compare/pluxee-v1.0.1...pluxee-v1.0.3) (2026-03-24)
+
+
+### Bug Fixes
+
+* remove sodexo stub that blocks HACS from finding pluxee ([2f190bb](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/commit/2f190bbfe8c184cd2fe46ecd1cf2227d6b69cad6))
+* update URLs to use new repo name ha-custom-component-pluxee-be ([bcb3421](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/commit/bcb342105b23fa4cc83de3cb161c7a63de12f7b0))
+
 ## [1.0.1](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/compare/pluxee-v1.0.0...pluxee-v1.0.1) (2026-03-24)
 
 
