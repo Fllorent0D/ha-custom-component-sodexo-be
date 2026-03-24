@@ -1,4 +1,4 @@
-DOMAIN = "sodexo"
+DOMAIN = "pluxee"
 PLATFORM = "sensor"
 DOMAIN_DATA = f"{DOMAIN}_data"
 

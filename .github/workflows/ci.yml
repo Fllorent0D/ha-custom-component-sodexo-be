@@ -57,12 +57,12 @@ jobs:
       - name: Check integration structure
         run: |
           required_files=(
-            "custom_components/sodexo/__init__.py"
-            "custom_components/sodexo/config_flow.py"
-            "custom_components/sodexo/const.py"
-            "custom_components/sodexo/manifest.json"
-            "custom_components/sodexo/sensor.py"
-            "custom_components/sodexo/translations/en.json"
+            "custom_components/pluxee/__init__.py"
+            "custom_components/pluxee/config_flow.py"
+            "custom_components/pluxee/const.py"
+            "custom_components/pluxee/manifest.json"
+            "custom_components/pluxee/sensor.py"
+            "custom_components/pluxee/translations/en.json"
           )
           for file in "${required_files[@]}"; do
             if [ ! -f "$file" ]; then

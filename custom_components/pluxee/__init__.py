@@ -1,4 +1,4 @@
-"""The sodexo integration."""
+"""The pluxee integration."""
 
 from __future__ import annotations
 

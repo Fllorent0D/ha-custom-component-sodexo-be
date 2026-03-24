@@ -1,5 +1,5 @@
 {
-    "title": "Sodexo meal card integration for Belgium",
+    "title": "Pluxee meal card integration for Belgium",
     "config": {
         "step": {
             "user": {
@@ -20,7 +20,7 @@
             "invalidCountry": "Invalid country or country not supported yet."
         },
         "abort": {
-            "single_instance_allowed": "Only a single configuration of Sodexo is allowed.",
+            "single_instance_allowed": "Only a single configuration of Pluxee is allowed.",
             "already_configured": "Integration is already configured"
         }
     }

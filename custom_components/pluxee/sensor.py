@@ -39,15 +39,15 @@ async def async_setup_entry(
     api = PluxeeAsyncClient(config[CONF_USERNAME], config[CONF_PASSWORD])
 
     sensors = [
-        SodexoLunchPassSensor(api, config),
-        SodexoEcoPassSensor(api, config),
-        SodexoGiftPassSensor(api, config),
+        PluxeeLunchPassSensor(api, config),
+        PluxeeEcoPassSensor(api, config),
+        PluxeeGiftPassSensor(api, config),
     ]
     async_add_entities(sensors, update_before_add=True)
 
 
-class SodexoSensor(SensorEntity):
-    """Representation of a Sodexo Card (Sensor)."""
+class PluxeeSensor(SensorEntity):
+    """Representation of a Pluxee Card (Sensor)."""
 
     def __init__(self, api: PluxeeAsyncClient, config: Any):
         super().__init__()
@@ -98,11 +98,11 @@ class SodexoSensor(SensorEntity):
         return {"updated": self._updated}
 
 
-class SodexoLunchPassSensor(SodexoSensor):
+class PluxeeLunchPassSensor(PluxeeSensor):
     @property
     def name(self) -> str:
         """Return the name of the entity."""
-        return "Sodexo Lunch amount"
+        return "Pluxee Lunch amount"
 
     @property
     def unique_id(self) -> str:
@@ -120,14 +120,14 @@ class SodexoLunchPassSensor(SodexoSensor):
 
         except Exception as err:
             self._available = False
-            _LOGGER.exception("Error updating data from DGEG API.", err)
+            _LOGGER.exception("Error updating data from Pluxee API.", err)
 
 
-class SodexoGiftPassSensor(SodexoSensor):
+class PluxeeGiftPassSensor(PluxeeSensor):
     @property
     def name(self) -> str:
         """Return the name of the entity."""
-        return "Sodexo Gift amount"
+        return "Pluxee Gift amount"
 
     @property
     def unique_id(self) -> str:
@@ -145,14 +145,14 @@ class SodexoGiftPassSensor(SodexoSensor):
 
         except Exception as err:
             self._available = False
-            _LOGGER.exception("Error updating data from DGEG API.", err)
+            _LOGGER.exception("Error updating data from Pluxee API.", err)
 
 
-class SodexoEcoPassSensor(SodexoSensor):
+class PluxeeEcoPassSensor(PluxeeSensor):
     @property
     def name(self) -> str:
         """Return the name of the entity."""
-        return "Sodexo EcoPass amount"
+        return "Pluxee EcoPass amount"
 
     @property
     def unique_id(self) -> str:
@@ -170,4 +170,4 @@ class SodexoEcoPassSensor(SodexoSensor):
 
         except Exception as err:
             self._available = False
-            _LOGGER.exception("Error updating data from DGEG API.", err)
+            _LOGGER.exception("Error updating data from Pluxee API.", err)

@@ -1,6 +1,6 @@
 {
-    "domain": "sodexo",
-    "name": "Sodexo Meal Card Integration for Belgium",
+    "domain": "pluxee",
+    "name": "Pluxee Meal Card Integration for Belgium",
     "codeowners": [
         "@netsoft-ruidias",
         "@Fllorent0D",

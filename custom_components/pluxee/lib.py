@@ -1,4 +1,4 @@
-"""LIB to Sodexo."""
+"""LIB to Pluxee."""
 
 from html.parser import HTMLParser
 

@@ -1,4 +1,4 @@
-"""Config flow for Sodexo integration."""
+"""Config flow for Pluxee integration."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ DATA_SCHEMA = vol.Schema(
 
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Sodexo config flow."""
+    """Pluxee config flow."""
 
     VERSION = 1
     CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL
@@ -39,7 +39,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             if await self._test_credentials(user_input):
                 _LOGGER.debug("Config is valid!")
                 return self.async_create_entry(
-                    title="Sodexo " + user_input["username"], data=user_input
+                    title="Pluxee " + user_input["username"], data=user_input
                 )
             else:
                 errors = {"base": "auth"}
