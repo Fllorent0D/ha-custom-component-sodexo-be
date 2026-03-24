@@ -60,8 +60,10 @@ jobs:
             "custom_components/sodexo/__init__.py"
             "custom_components/sodexo/config_flow.py"
             "custom_components/sodexo/const.py"
+            "custom_components/sodexo/coordinator.py"
             "custom_components/sodexo/manifest.json"
             "custom_components/sodexo/sensor.py"
+            "custom_components/sodexo/strings.json"
             "custom_components/sodexo/translations/en.json"
           )
           for file in "${required_files[@]}"; do

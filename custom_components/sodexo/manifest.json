@@ -1,16 +1,15 @@
 {
     "domain": "sodexo",
-    "name": "Sodexo Meal Card Integration for Belgium",
+    "name": "Pluxee (formerly Sodexo) Belgium",
     "codeowners": [
-        "@netsoft-ruidias",
         "@Fllorent0D",
         "@Tib612"
     ],
     "config_flow": true,
     "dependencies": [],
-    "documentation": "https://github.com/Fllorent0D/ha-custom-component-sodexo-be",
+    "documentation": "https://github.com/Fllorent0D/ha-custom-component-pluxee-be",
     "iot_class": "cloud_polling",
-    "issue_tracker": "https://github.com/Fllorent0D/ha-custom-component-sodexo-be/pulls",
+    "issue_tracker": "https://github.com/Fllorent0D/ha-custom-component-pluxee-be/issues",
     "requirements": ["pluxee-api>=0.2.3"],
-    "version": "0.2.0"
+    "version": "0.3.0"
 }

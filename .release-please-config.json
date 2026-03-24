@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "release-type": "python",
-      "package-name": "sodexo",
+      "package-name": "pluxee-be",
       "version-file": "custom_components/sodexo/manifest.json"
     }
   },
