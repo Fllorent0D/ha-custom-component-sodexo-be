@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/compare/pluxee-v1.0.0...pluxee-v1.0.1) (2026-03-24)
+
+
+### Bug Fixes
+
+* add deprecated sodexo stub for HACS migration ([434f72b](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/commit/434f72b579307a14b9a29276086e27bf478f244a))
+
 ## [1.0.0](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/compare/pluxee-v1.0.0...pluxee-v1.0.0) (2026-03-24)
 
 
