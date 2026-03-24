@@ -4,19 +4,19 @@
         "step": {
             "user": {
                 "title": "Add Credentials",
-                "description": "Please type your credentials",
+                "description": "Please type your credentials for the [{portal_name}]({portal_url}) portal.",
                 "data": {
                     "username": "Username",
                     "password": "Password"
                 },
                 "data_description": {
-                    "username": "The username used to login in https://users.pluxee.be portal",
-                    "password": "The password used to login in https://users.pluxee.be portal"
+                    "username": "The username used to login in the Pluxee portal",
+                    "password": "The password used to login in the Pluxee portal"
                 }
             }
         },
         "error": {
-            "auth": "Invalid credentials accessing https://users.pluxee.be portal.",
+            "auth": "Invalid credentials for the Pluxee portal.",
             "invalidCountry": "Invalid country or country not supported yet."
         },
         "abort": {

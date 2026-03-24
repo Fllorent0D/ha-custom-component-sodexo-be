@@ -2,6 +2,7 @@ import asyncio
 
 from pluxee import PluxeeAsyncClient
 
+
 async def main():
     username = input("Username: (leave empty to use PLUXEE_USERNAME env variable)")
     password = input("password: (leave empty to use PLUXEE_PASSWORD env variable)")
@@ -16,5 +17,5 @@ async def main():
     # gift_pass: 0.0
     # conso_pass: 0.0
 
-        
+
 asyncio.get_event_loop().run_until_complete(main())

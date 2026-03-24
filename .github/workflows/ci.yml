@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff black isort
+
+      - name: Run ruff
+        run: ruff check .
+
+      - name: Check formatting with black
+        run: black --check .
+
+      - name: Check imports with isort
+        run: isort --check-only .
+
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Hassfest validation
+        uses: home-assistant/actions/hassfest@master
+
+      - name: HACS validation
+        uses: hacs/action@main
+        with:
+          category: integration
+
+      - name: Check integration structure
+        run: |
+          required_files=(
+            "custom_components/sodexo/__init__.py"
+            "custom_components/sodexo/config_flow.py"
+            "custom_components/sodexo/const.py"
+            "custom_components/sodexo/manifest.json"
+            "custom_components/sodexo/sensor.py"
+            "custom_components/sodexo/translations/en.json"
+          )
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Missing required file: $file"
+              exit 1
+            fi
+          done
+          echo "All required files present"

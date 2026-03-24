@@ -1,5 +1,3 @@
-from typing import Dict
-
 DOMAIN = "sodexo"
 PLATFORM = "sensor"
 DOMAIN_DATA = f"{DOMAIN}_data"
@@ -59,5 +57,5 @@ CONF_COUNTRIES = [
     "United Arab Emirates",
     "United States",
     "United-Kingdom",
-    "Vietnam"
+    "Vietnam",
 ]
