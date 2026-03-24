@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/compare/pluxee-be-v1.0.0...pluxee-be-v1.0.1) (2026-03-24)
+
+
+### Bug Fixes
+
+* use simple release type with JSON path to update manifest version ([a535bd7](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/commit/a535bd7d4f0b6952d5e9590159f096c64e23d93e))
+
 ## [1.0.0](https://github.com/Fllorent0D/ha-custom-component-pluxee-be/compare/pluxee-be-v1.0.0...pluxee-be-v1.0.0) (2026-03-24)
 
 
