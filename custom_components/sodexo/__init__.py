@@ -6,7 +6,7 @@ import logging
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers.typing import ConfigType
+from homeassistant.helpers import config_validation as cv
 
 from .const import DOMAIN
 
@@ -14,13 +14,9 @@ __version__ = "1.0.0"
 _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.DEBUG)
 
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
+
 PLATFORMS: list[str] = ["sensor"]
-
-
-async def async_setup(hass: HomeAssistant, config: ConfigType):
-    # Return boolean to indicate that initialization was successful.
-    _LOGGER.debug("async_setup")
-    return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
