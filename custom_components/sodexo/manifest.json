@@ -1,0 +1,14 @@
+{
+    "domain": "sodexo",
+    "name": "[DEPRECATED] Use Pluxee integration instead",
+    "codeowners": [
+        "@Fllorent0D",
+        "@Tib612"
+    ],
+    "config_flow": false,
+    "dependencies": [],
+    "documentation": "https://github.com/Fllorent0D/ha-custom-component-pluxee-be",
+    "iot_class": "cloud_polling",
+    "requirements": [],
+    "version": "1.0.0"
+}
